@@ -11,7 +11,6 @@ public class AuthenticationHandler implements TAuthenticationService.Iface {
     @Autowired
     AuthenticationService authenticationService;
 
-
     @Override
     public boolean authenticateUser(String userName, String password) throws TException {
         return authenticationService.authenticateUser(userName, password);

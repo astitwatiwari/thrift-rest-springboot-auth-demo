@@ -13,13 +13,7 @@ public class AuthenticationService {
     UserRepository userRepository;
 
     public boolean authenticateUser(String userName, String password) {
-        List<User> userList = userRepository.findAll();
-
-        for (User user : userList) {
-            if (user.getUsername().equals(userName) && user.getPassword().equals(password)) {
-                return true;
-            }
-        }
-        return false;
+        User user = userRepository.findUserByUsername(userName);
+        return user.getPassword().equals(password);
     }
 }
