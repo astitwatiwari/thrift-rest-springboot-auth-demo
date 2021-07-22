@@ -1,5 +1,6 @@
 package com.example.demo.builder;
 
+import com.example.demo.TPongResponse;
 import com.example.demo.TUser;
 import com.example.demo.model.User;
 import org.springframework.stereotype.Component;
@@ -11,6 +12,7 @@ public class UserBuilder {
     }
 
     public static TUser buildTUser(User user) {
-        return new TUser(user.getUserId(), user.getUsername(), user.getPassword());
+//        return new TUser(user.getUserId(), user.getUsername(), user.getPassword());
+        return null;
     }
 }
